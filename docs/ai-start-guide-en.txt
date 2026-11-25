@@ -1,4 +1,4 @@
-﻿AI-assisted concept distribution / 2026-11-24 / guide-1.23
+﻿AI-assisted concept distribution / 2026-11-25 / guide-1.24
 https://dueyama.github.io/r6s-openwrt-lab-notes/start-en
 
 
@@ -29,7 +29,7 @@ Start with a suitable part using your Raspberry Pi, Mac or Linux machine. This g
 
 The first milestone is a receive/transmit display using synthetic data that passes shared checks. Then investigate whether corresponding counters can be read on your device. Installing OpenWrt is a separate, later stage.
 
-Guide edition: 2026-11-24 / guide-1.23 · Shared contract: interface-counter-v1
+Guide edition: 2026-11-25 / guide-1.24 · Shared contract: interface-counter-v1
 
 This is a newly authored implementation guide. End-to-end installation in a reader’s environment has not yet been validated. Results from the original R6S experiment do not establish success on your equipment.
 
@@ -264,7 +264,7 @@ Read the acceptance and visual-check example → [https://dueyama.github.io/r6s-
 
 Read the truncated comparison example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-source-recovery-20261123]
 
-Read the final review check example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-final-check-20261124]
+Read the final review check example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#apk-scheduled-review-20261125]
 
 Check dependencies and service ownership as a coherent set
 

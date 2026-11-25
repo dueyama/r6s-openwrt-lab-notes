@@ -1,4 +1,4 @@
-﻿AI-assisted concept distribution / 2026-11-24 / guide-1.23
+﻿AI-assisted concept distribution / 2026-11-25 / guide-1.24
 https://dueyama.github.io/r6s-openwrt-lab-notes/start
 
 
@@ -29,7 +29,7 @@ AIへ渡すテキスト版を開く・保存 [https://dueyama.github.io/r6s-open
 
 最初の到達点は「合成データで受信・送信の表示を作り、共通の確認例を通すこと」です。その後、実機で対応するカウンターを読めるか調べます。OSをOpenWrtへ変更する工程は独立した発展段階にします。
 
-ガイド版：2026-11-24 / guide-1.23 · 共通仕様：interface-counter-v1
+ガイド版：2026-11-25 / guide-1.24 · 共通仕様：interface-counter-v1
 
 これは新しく用意した実装ガイドです。読者環境での端から端までの導入成功は、まだ検証していません。元のR6S実験の検証結果を、あなたの機材での成功と読み替えないでください。
 
@@ -264,7 +264,7 @@ CHANGES.md — 実装の版・変更理由・直前の動作確認済み版
 
 比較APIが一覧を打ち切ったときの実例 → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html#audit-source-recovery-20261123]
 
-監査終了前に最新結果を読み直す実例 → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html#audit-final-check-20261124]
+監査終了前に最新結果を読み直す実例 → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html#apk-scheduled-review-20261125]
 
 依存関係とサービス所有者を、一組として確かめる
 
