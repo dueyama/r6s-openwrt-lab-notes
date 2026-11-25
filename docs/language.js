@@ -4,3 +4,24 @@ const destinations={"development-history":"index","latest-audit-note":"index","d
 function revealDetails(){const target=document.getElementById(location.hash.slice(1));if(!target)return;let expanded=false;for(let node=target;node;node=node.parentElement){if(node.tagName==='DETAILS'&&!node.open){node.open=true;expanded=true;}}if(expanded)target.scrollIntoView();}
 window.addEventListener('hashchange',revealDetails);revealDetails();
 if(location.hash){const target=location.hash.slice(1);const key=destinations[target];if(key&&!document.getElementById(target)){const en=document.documentElement.lang==='en';const file=key==='index'?(en?'en.html':'index.html'):key+(en?'-en':'')+'.html';location.replace(file+location.hash);}}
+
+(function () {
+  const switcher = document.getElementById('language');
+  if (!switcher) return;
+  const key = 'r6s-lab-language';
+  switcher.addEventListener('click', function () {
+    try { localStorage.setItem(key, switcher.hreflang); } catch {}
+  });
+
+  // The directory URL is the shared entrance. Keep explicit page and section links intact.
+  if (location.pathname !== '/r6s-openwrt-lab-notes/' || location.hash) return;
+
+  let preferred;
+  try { preferred = localStorage.getItem(key); } catch {}
+  if (preferred !== 'ja' && preferred !== 'en') {
+    const languages = navigator.languages?.length ? navigator.languages : [navigator.language];
+    preferred = languages.map(tag => (tag || '').toLowerCase().split('-')[0])
+      .find(language => language === 'ja' || language === 'en') || 'en';
+  }
+  if (preferred === 'en') location.replace('en.html' + location.search);
+})();
