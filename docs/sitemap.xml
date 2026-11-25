@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/index.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/index.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/luna.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/luna.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/luna.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/luna.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/luna.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/development.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/development.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/development-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/development.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/development-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/development.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/development-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/development.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/rust.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/rust.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/rust-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/rust.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/rust-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/rust.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/rust-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/rust.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/npu.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/npu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/npu.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/npu.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/npu.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/thresholds.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/start.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/start.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/start-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/start.html" />
+  </url>
+  <url>
+    <loc>https://dueyama.github.io/r6s-openwrt-lab-notes/start-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://dueyama.github.io/r6s-openwrt-lab-notes/start.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://dueyama.github.io/r6s-openwrt-lab-notes/start-en.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dueyama.github.io/r6s-openwrt-lab-notes/start.html" />
+  </url>
+</urlset>

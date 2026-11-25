@@ -24,4 +24,4 @@ NanoPi R6SとOpenWrtで家庭用ルーターを構成し、機材を選んだ理
 - [AIと始める](https://dueyama.github.io/r6s-openwrt-lab-notes/start.html)
 - [日次セキュリティ監査記録と日ごとの修正数](https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html#daily-verified-fixes)
 
-GitHub Pages試験版で配信するHTMLや画像は `docs/` にまとめています。R6SでNPUを動かす実装は、専用リポジトリで公開しています。[NPU実装のリポジトリ](https://github.com/dueyama/openwrt-r6s-rknpu)
+GitHub Pagesで配信するHTMLや画像は `docs/` にまとめています。R6SでNPUを動かす実装は、専用リポジトリで公開しています。[NPU実装のリポジトリ](https://github.com/dueyama/openwrt-r6s-rknpu)
