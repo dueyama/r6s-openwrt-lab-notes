@@ -8,7 +8,7 @@ This bilingual field journal follows a home router built around the NanoPi R6S a
 - [Start with AI](https://dueyama.github.io/r6s-openwrt-lab-notes/start-en.html)
 - [Daily security reviews and verified fixes](https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en.html#daily-verified-fixes)
 
-This repository hosts the public website files for the GitHub Pages trial. The R6S NPU implementation has its own repository. [NPU implementation](https://github.com/dueyama/openwrt-r6s-rknpu)
+The `docs/` directory contains the website files served by GitHub Pages. The R6S NPU implementation has its own repository. [NPU implementation](https://github.com/dueyama/openwrt-r6s-rknpu)
 
 ---
 
@@ -22,4 +22,4 @@ NanoPi R6SとOpenWrtで家庭用ルーターを構成し、機材を選んだ理
 - [AIと始める](https://dueyama.github.io/r6s-openwrt-lab-notes/start.html)
 - [日次セキュリティ監査記録と日ごとの修正数](https://dueyama.github.io/r6s-openwrt-lab-notes/audits.html#daily-verified-fixes)
 
-ここはGitHub Pages試験版の公開用ファイルを置くリポジトリです。R6SでNPUを動かす実装は、専用リポジトリで公開しています。[NPU実装のリポジトリ](https://github.com/dueyama/openwrt-r6s-rknpu)
+GitHub Pages試験版で配信するHTMLや画像は `docs/` にまとめています。R6SでNPUを動かす実装は、専用リポジトリで公開しています。[NPU実装のリポジトリ](https://github.com/dueyama/openwrt-r6s-rknpu)
