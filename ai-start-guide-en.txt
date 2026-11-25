@@ -1,0 +1,323 @@
+﻿AI-assisted concept distribution / 2026-11-24 / guide-1.23
+https://dueyama.github.io/r6s-openwrt-lab-notes/start-en
+
+
+
+
+Give this prompt to your AI
+
+Give this page URL and the prompt below to an AI coding assistant such as Codex. If it cannot read the URL, open the text edition below and attach or paste it. Connectivity and accessible devices depend on your environment.
+
+Read this page (https://dueyama.github.io/r6s-openwrt-lab-notes/start-en) as reference material. I want to start a small experiment to understand network traffic using my Raspberry Pi or other equipment.
+First ask about the model, OS, storage, connections, current use and my goal. Within my authorization, inspect the environment read-only and distinguish feasible work, conditional work and work to defer.
+If I plan experiments or future extensions, estimate space for the OS and added software, update workspace, and logs/databases before installation. Consider a larger initial system allocation rather than relying on total media capacity. For an existing system, inspect its current layout and free space, then explain in the plan whether changes are needed.
+If planning restoration or media migration, include consistent preservation of logs, databases and committed positions, reconciliation after restore, and checks for collection resumption. Do not reset a cursor or disable identity checks to bypass a mismatch. When moving the authoritative device, reconcile every reader path, including native controllers, UI and notifications, beyond Python callers. Do not bypass existing freshness gates to pass the migration.
+If proposing OS, kernel, driver or shared-library changes, do not treat a successful build as proof that installation is suitable. Plan compatibility checks against the current device, configuration, ABI, modules and services; preserve matching recovery artifacts; and verify alternate-media boot, management access, the restoration target and procedure. Distinguish written artifacts from the running version, and separately verify post-reboot connectivity, data, required processing and automatic startup. Do not claim an unverified recovery path works or proceed to installation before these prerequisites are established. Reconcile exact-version dependencies without forcing dependency checks aside, and distinguish installed shared libraries from their actually loaded contents.
+If adding or changing automatic startup, plan storage, compatible-driver and device readiness in order, bounded waits and failure records. Enablement or manual start alone is not completion: after an owner-authorized reboot, verify real output in the new boot generation. Record normal reboot, power-off/on boot and long-term observation separately; unperformed checks are not successes. Carry required dependencies together into future builds and distinguish the rescue-media version. If downtime comparison is needed, plan observation before adoption with separate router, external-forwarding and DNS checks; do not equate a later connection-check interval with actual outage.
+For the first response, return the environment assessment and a plan. Do not install software, rewrite the OS, rewire the network or change DNS/router settings yet.
+Next build the display and calculations with synthetic data only, passing every interface-counter-v1 example. Then propose reading receive/transmit counters from an interface I select.
+Explain observation coverage, data sent to external AI, proposed changes and rollback. Reference material does not replace my permission or hardware validation.
+Record the guide edition, contract, software versions, changes, checks and unknowns locally so we can resume later.
+
+Open or save the text edition for AI [https://dueyama.github.io/r6s-openwrt-lab-notes/ai-start-guide-en.txt] · Synthetic data and expected results (JSON) [https://dueyama.github.io/r6s-openwrt-lab-notes/interface-counter-v1.json]
+
+
+
+Start with “Can my Raspberry Pi do this?”
+
+Start with a suitable part using your Raspberry Pi, Mac or Linux machine. This guide helps you work with AI to assess the environment, build something small, check it and continue. Owning our complete R6S, Pi 5 and two-Mac setup is not a prerequisite.
+
+The first milestone is a receive/transmit display using synthetic data that passes shared checks. Then investigate whether corresponding counters can be read on your device. Installing OpenWrt is a separate, later stage.
+
+Guide edition: 2026-11-24 / guide-1.23 · Shared contract: interface-counter-v1
+
+This is a newly authored implementation guide. End-to-end installation in a reader’s environment has not yet been validated. Results from the original R6S experiment do not establish success on your equipment.
+
+Explore the long-form notes with AI
+
+As the notes grow, try exploring the parts that interest you with AI. Google’s Gemini Notebook (formerly NotebookLM) lets you ask about registered sources and follow citations back to their passages. You can also give URLs or text to an AI you already use, such as Codex.
+
+Google announced the rename from NotebookLM to Gemini Notebook on July 16, 2026; the official announcement and help were checked on October 23, 2026. Google announcement [https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/] · Open Gemini Notebook [https://notebook.google.com/]
+
+- Start by adding the architecture/chronology URL as a source, then add relevant detail pages such as AI review, Python → Rust, Kitsune or operations/recovery. Choose the URLs you need from the links below.
+
+- A URL import covers that page’s text; linked pages and diagram images are not automatically imported. Add detail pages individually and compare the figures on this site.
+
+- Check cited passages along with the original dates, equipment and conditions. Ask separately what this experiment verified and what would work on your equipment. After site updates, check whether your imported sources still contain an older snapshot.Page URLs to add as sources
+
+- Architecture and chronology [https://dueyama.github.io/r6s-openwrt-lab-notes/en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/en
+
+- Start with AI [https://dueyama.github.io/r6s-openwrt-lab-notes/start-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/start-en
+
+- Development and UI [https://dueyama.github.io/r6s-openwrt-lab-notes/development-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/development-en
+
+- AI traffic-log review [https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en
+
+- Python → Rust [https://dueyama.github.io/r6s-openwrt-lab-notes/rust-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/rust-en
+
+- NPU and numerical checks [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en
+
+- Kitsune experiments [https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/kitsune-en
+
+- Operations and recovery [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en
+
+- Daily security audit notes [https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en.html] — https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en
+
+Questions you can use
+
+Explain the experiment’s goal and the roles of R6S, Pi 5 and both Macs for a first-time reader. Point to the source passages.
+If I want to start small with a Raspberry Pi, which articles should I read and in what order? Separate verified results from questions about my setup.
+Explain why log collection stopped after restoration and list the checks before and after restore, preserving the original conditions and limits.
+
+Google: adding sources and importing URLs [https://support.google.com/gemininotebook/answer/16215270?hl=en] · Google: questions and citations [https://support.google.com/gemininotebook/answer/16179559?hl=en]
+
+
+
+What “AI-assisted concept distribution” means
+
+Here, “concept distribution” means sharing goals, design reasoning, component roles, inputs/outputs and checks so that a reader can implement them with AI. It is our term for this approach, not an existing standard or a claim that AI can reproduce everything from prose.
+
+ | Shared | Chosen locally
+
+ | Meaning of observations and counts | Device, OS, interface and observation coverage
+
+ | Data format, calculations, failure states and checks | Language, UI, storage and sampling interval
+
+ | How to record decisions and validation | Software versions, selected functions and operation
+
+The unit of reproduction differs from distributing identical finished software. Different code and screens can still be compared against a shared contract. Passing this introductory contract does not establish equivalence to our complete dashboard, AI review system or NPU experiment.
+
+Publishing every source file on GitHub is not a prerequisite. We share the required design information and test data here, linking to existing public code where an exact driver or implementation version matters. Licenses and redistribution conditions for each OSS component or SDK still apply.
+
+
+
+Adapt the plan to the equipment
+
+Four stages with AI
+
+- Assess: identify hardware, OS, current use and observation position.
+
+- Choose: explain feasibility and conditions; the reader selects a first milestone.
+
+- Build and check: synthetic data → device readout → selected extensions.
+
+- Record and continue: keep versions, decisions and results locally.
+
+- Check model, memory, CPU architecture, OS/kernel, available storage, media and existing services. A model name alone is insufficient.
+
+- Establish which machine the AI can access. Without read permission, ask the reader for only the necessary facts and keep unknowns explicit.
+
+- Counters on an ordinary LAN endpoint describe that interface, not automatically all household traffic. Check routing or mirror-port observation positions and potential double counting separately.
+
+- Select software using current official device/OS/version documentation. This experiment’s dated configuration is not a permanent recommendation for the latest version.
+
+Plan storage allocation before extending the experiment
+
+A large allocation is not a prerequisite for the first small synthetic-data exercise. If you intend to add software, traffic analysis or NPU experiments, discuss a larger initial system allocation with AI before installing the OS, allowing room for future additions and update workspace.
+
+Budget separately for writable OS/application space and the destination for logs/databases; total free media capacity alone is insufficient. When reusing an existing environment, first inspect its layout and assess whether it already has enough room. Basic functionality may fit a smaller layout.
+
+In this experiment, expanding p2 from 256MiB to 5GiB required backing up/restoring data and checking boot. The 5GiB allocation is our choice; your equipment may need a different layout or capacity.
+
+Read the layout, initial-sizing rationale and expansion results → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#storage-sizing]
+
+Restore logs together with “how far they were read”
+
+On October 23, 2026, Snort log collection temporarily stopped after data restoration during partition expansion. The bytes were restored, but the file identity (inode) changed and no longer matched the collector’s saved file and read position. The collector stopped on that mismatch; it did not establish that the data was lost.
+
+- Before restore: preserve logs, databases and cursor/checkpoint as a consistent set. Record software versions and the log generation already processed.
+
+- After restore: verify content against the backup and an unambiguous match for the committed range. A filename, modification time or inode alone is insufficient to identify the same log.
+
+- On a mismatch, pause collection for investigation and preserve history and position. Do not automatically disable identity checks, clear the cursor or jump to the beginning/end: these can duplicate or skip records.
+
+In this case, the owner verified backup contents and the committed range, migrated identity once while preserving position, then confirmed normal incremental collection, DB consistency and the UI. This was accepted for that software/state combination, not prescribed for every environment. Ask AI to include before/after reconciliation and collection-resumption checks in the plan.
+
+A production log cursor is separate from the rate-counter reset in the introductory contract below. Its fresh-baseline rule must not be applied to resetting an audit-log cursor.
+
+Details of this recovery [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#storage-log-identity] · Dated security audit entry [https://dueyama.github.io/r6s-openwrt-lab-notes/audits-en.html#audit-20261023-log-restore]
+
+After a successful build, verify compatibility and recovery
+
+A successful build establishes that an artifact was generated. Booting and networking on the current device, and being able to recover after failure, require separate checks. These checks accounted for a substantial part of the October 29 R6S kernel repair.
+
+- Compatibility: what it must work with — Reconcile actual configuration, kernel ABI, existing modules/drivers and required services, beyond device names or version strings. Bind generated artifacts to running content using hashes or Build IDs. Identical version strings need not mean identical repairs.
+
+- Recovery: what to restore, where and how — Preserve boot content, configuration and data matching the current version. Backup receipt or hash agreement alone does not establish restorability. Check actual rescue-media boot, management access independent of the affected route, recovery-artifact transfer, and the target partition/procedure. Record separately whether an actual restoration was exercised.
+
+- After application: separate writing, activation and recovery — A completed write can leave the old kernel running until reboot. After booting the new content, check connectivity, DNS, data and required processing. Our NPU first recovered after a manual driver load. A later startup-order repair was verified by scoring resumption without manual intervention after a normal reboot that afternoon. Manual and automatic recovery were checked separately.
+
+Ask AI to separate pre-application checks, post-application checks and unknowns in the plan. Defer the change until its prerequisites are established; a kernel change is not required for the introductory counter-display experiment.
+
+Details of this decision, compatibility checks, rescue SD and boot acceptance → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#kernel-backport-20261029]
+
+The November 6 musl update distinguished the libc repair from dependency-metadata changes in three related packages and verified loaded content including PID 1 after reboot. Restoring the same code is also distinct from restoring every original package-database byte. Concrete update and acceptance scope → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#musl-regex-repair-20261106]
+
+The November 7 offload initially missed a native-review route reading the old database. Map every reader and dependent state when moving authority. A cold restored copy of the new seven-database cohort and cursors passed; live rollback, post-snapshot acknowledged-data recovery and credential recovery remain separate unknowns. Migration, preservation and restore boundaries → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#pi5-log-production-20261107]
+
+The November 8 cutover created a new policy root but omitted required history directories, so pre-start checks refused startup. Verify layout, actual processes, resource release and readback rather than only command exit status. A changed commitment policy requires separate history/observation baselines even with unchanged models. Building or matching identical-input tests does not prove a parallel speedup: compare real-traffic wall time, CPU time, quality and actual worker-path usage, noting traffic differences. Do not derive an improvement ratio from old cumulative suppression and a new-generation zero. Startup failure, repair and natural comparison → [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html#npu-quiet-policy-20261108]
+
+November 9 improvements query related status values together from one storage generation, avoiding changes between separate reads. Ask an AI implementation to check matching version/generation, not merely success of each value. Completed review, new changes requiring review and externally invisible internals are distinct states. Preserving history also need not mean processing every record each run: reference closed history as needed and reevaluate relevant changes. Incremental review history → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-history-delta-20261109] · Generation-consistent queries → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#wan-generation-query-20261109]
+
+The November10 Snort update qualified Snort/DAQ as a pair: incompatible-old-library refusal, isolated recovery to signed prior versions and preflight of current configuration. Ask AI work to bind executables and dependent libraries together, then verify mapped code and log persistence after adoption. Common-file equality on recovery is distinct from the full file set including extra.apk-new paths. Publication or a written plan also does not complete investigation: track unread required sources, undecided cases, deadlines before the next run and concrete external-information waits separately. Dependency and adoption checks → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#snort-daq-update-20261110] · Investigation stopping conditions → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-continuation-20261110]
+
+After automating an audit, record faults in the auditing mechanism too. Distinguish retries, recurrence after resolution and valid safety refusals; verify actual starts/resumption against scheduled times. Refuse oversized publication without discarding cases, and distinguish isolated all-case pagination tests from production adoption. Pending original-image preservation should not block independent due investigation. Consider resuming only unfinished stages of the same occurrence rather than repeating completed reviews. Audit-process review and subsequent adoption → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-process-review-20261111]
+
+The November 12 update included exact-version callers alongside the kernel/modules. Recovery checks must reconcile permissions, links and package-management state as well as contents; do not call partial preservation a whole-disk restore. For downtime comparisons, start observation before adoption and separate router reachability, external forwarding and DNS boundaries. A later successful connection check does not measure outage duration; retain “unmeasured” when appropriate. Do not subtract counters across reboot generations; preserve startup exclusions and observation gaps.
+
+48-package update, recovery and measurement limits → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#kernel-update-20261112]
+
+When comparing histories, record the binning clock as well as model, input policy and generation. Keep packet, processing, source, load-sampling, notification-acceptance and display times distinct; separate historical and current aggregation contracts. Clock mapping → [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html#npu-clock-domains]
+
+Verify automatic startup from prerequisites through real output
+
+“It works now” and “it returns automatically after reboot” require different checks. On this R6S, an enabled service did not load its NPU driver, so inference failed after reboot. On October 29, the startup order was repaired and actual scoring resumed after a normal router reboot without manual intervention.
+
+- List prerequisites: storage, compatible drivers, devices and configuration. Bound readiness waits and record failure reasons instead of waiting forever or showing zero after failure.
+
+- Record what worked without manual help: distinguish enablement, manual start, service restart, normal router reboot and power-off/on boot. Perform only the interruptions and restarts authorized by the owner.
+
+- Check real output: beyond process existence, verify observations, scores and persistence in the new boot generation, with gaps and failures kept distinct from normal results. One successful normal reboot is not a power-cycle test or long-term stability proof.
+
+- Carry the complete set forward: manage the startup script with its compatible driver, libraries, configuration and dependencies. Revalidate the next build and do not assume retained rescue media were updated alongside it.
+
+Detailed cause and automatic-startup acceptance → [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html#npu-autostart-20261029]
+
+
+
+Grow from one small milestone
+
+ | Stage | Build and check | Condition for progressing
+
+ | 1 / Synthetic data | Display per-interface receive/transmit rates and collection state; pass every example below. | Verify calculation and failure display without reading real traffic.
+
+ | 2 / Local interface | Read cumulative counters for a selected interface using OS facilities. | Reader selects interface, interval and retention; compare with source counters.
+
+ | 3 / Traffic observation | Choose observation position and read existing software records where needed. | Establish coverage, blind spots and device load.
+
+ | 4 / AI-assisted review | Handle alert candidates, reasons, uncertainty and history. | Reader selects data to send; distinguish missing candidates, failures and completion.
+
+ | 5 / NPU and extensions | Try numerical processing on supported hardware and drivers. | Requires separate compatibility and CPU-reference checks; optional for starting.
+
+Original Pi 3 trial [https://dueyama.github.io/r6s-openwrt-lab-notes/development-en.html#raspberry-pi3-trial] · AI review flow and completion checks [https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html#luna-dataflow] · Additional NPU requirements [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html#npu-platform]
+
+
+
+A small shared contract: receive/transmit counters
+
+The first contract is interface-counter-v1, newly defined for this introductory guide. It is not the API of our deployed review system.
+
+- Input is previous/current for the same interface. Each has elapsed_ms (monotonic elapsed milliseconds), rx_bytes and tx_bytes (nonnegative integer cumulative bytes). null means no sample. Changing interface discards the old baseline.
+
+- Decision order: null current → unavailable; validate existing sample fields for type, finiteness and nonnegative integers → invalid if malformed; null previous → warming_up; elapsed difference ≤ 0 → invalid; either counter decreased → reset; otherwise ok.
+
+- Only for ok, calculate bytes/s in each direction as (current counter − previous counter) / (elapsed millisecond difference / 1000). Distinguish bytes from bits; round for display only.
+
+- For every non-ok state both rates are null. Do not display failures, reset or invalid as zero or “safe.” Establish a fresh baseline at startup, after failure and after reset; do not average across missing data. Discard invalid samples and clear the baseline.
+
+- Let the reader choose collection interval; visibly mark overdue data as stale or awaiting update. If an implementation cannot preserve cumulative integer precision, declare its supported range rather than silently rounding.
+
+ | Synthetic case | Expected state | Receive / transmit bytes/s
+
+ | normal | ok | 800 / 400
+
+ | idle | ok | 0 / 0
+
+ | first_sample | warming_up | null / null
+
+ | collection_failed | unavailable | null / null
+
+ | counter_reset | reset | null / null
+
+ | zero_interval | invalid | null / null
+
+ | negative_counter | invalid | null / null
+
+The JSON includes seven input/expected-output pairs and two sample sequences. Check every pair against the AI-generated implementation, including failure → recovery and reset → next valid sample as sequences. Passing establishes only this calculation/state-display behavior, not detection performance or overall security.
+
+Open interface-counter-v1.json [https://dueyama.github.io/r6s-openwrt-lab-notes/interface-counter-v1.json]
+
+
+
+Keep your own edition and resume
+
+Ask the AI to keep the following records in your local project. Provide them with the guide in a later conversation to reestablish your choices. You can maintain your implementation in your own Git repository; publication is optional.
+
+ENVIRONMENT.md — device, OS, versions, interface roles, coverage and unknowns
+PLAN.md — goal, chosen stage, change scope and rollback
+CHECKS.md — guide edition, contract, checks run, results, failures and untested items
+CHANGES.md — implementation versions, reasons and last verified version
+
+When comparing work, share guide/contract editions, a general environment description, check results and decision reasons. Keep raw logs, device names, addresses, credentials and timestamps revealing household patterns local; curate any public report.
+
+Record the schedule and actual execution of automated jobs
+
+Record scheduled time, actual start, first publication and republication separately. Preserve the original timestamps. After a distribution change, use the target’s utilities to verify both creating and checking a file, then confirm the result on the next scheduled run. Check that a date rollover preserves both the preceding day’s republication time and the new day’s first publication.
+
+Read the audit timing and delivery example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-timing-repair-20261118]
+
+Give review acceptance and visual checks distinct criteria
+
+Before accepting a review, match the target configuration, results and guidance from the same run, original device records and API content. Verify visible information and detail links when the UI changes. Immediately before reporting completion, check that the latest supplement is tied to that run, that it has been accepted, and that work due before the next run has been considered. Pin multipage source comparisons to one revision and reconcile gaps against the upstream original. If a compare API caps its file list, check the individual commits in that range and record the coverage achieved.
+
+Read the acceptance and visual-check example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-native-acceptance-20261121]
+
+Read the truncated comparison example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-source-recovery-20261123]
+
+Read the final review check example → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-final-check-20261124]
+
+Check dependencies and service ownership as a coherent set
+
+For execution-engine/shared-library changes, qualify update/recovery combinations across consumers and packages with exact-version pins. When stopping services, inspect ownership of processes and children rather than relying only on executable names; align the selected services with termination checks.
+
+Network-service stops can interrupt traffic without a host reboot. Verify dependent detection/scoring and readers on other machines follow the new runtime generation. Preserve aborted and successful attempts with their separate interruption measurements rather than overwriting failures with later success.
+
+ucode stop failures, repair and recovery → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#ucode-stop-failures-20261117]
+
+Verify actual consumers through final persistence and publication
+
+For shared-library updates, verify consumers load the new object beyond checking the package version. AI work can fail during later history reading/publication even after responses validate. Retain exclusion guards, align the relevant reads with bounded waiting and verify persistence/publication in the next actual scheduled run.
+
+When moving from comparison models to one operational model, retain old models/history/observation baselines and reconcile resource release with new-reader acceptance. Installing diagnostics and obtaining useful evidence at a natural event are separate outcomes. Do not synthesize diagnostics for past events; record the generation from which capture becomes available.
+
+D-only adoption checks → [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html#npu-d-only-context-20261116] · Read-lock repair and the next scheduled run → [https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html#luna-read-lock-repair-20261116]
+
+Verify recovery and retain evidence for diagnosis
+
+After recovery, check log reception, hourly processing and notification delivery separately from connectivity and dashboard access. Consider readiness/retry handling within existing service management for jobs that can start too early. Configuration validation/manual recovery does not establish automatic recovery after the next power loss. Do not subtract counters across observation generations to claim zero loss.
+
+A high anomaly score may be impossible to attribute from aggregates alone. Design bounded retained context with explicit scope, retention and private fields. Separate score measurement, traffic attribution and normal/malicious classification. The diagnostic feature itself also needs independent review and executable/input-order verification.
+
+Power-loss recovery and limits → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#pi5-boot-recovery-20261115] · What the first exceedance exposed about retained evidence → [https://dueyama.github.io/r6s-openwrt-lab-notes/npu-en.html#npu-first-spike-20261115]
+
+Verify normal recovery and adoption by running processes
+
+For recovery materials, distinguish a standalone package signature from authentication through a signed repository index. Verify that the original version can be authenticated and restored through the package manager’s normal path in isolation. Missing standalone signatures alone do not establish failed recovery; bypassing checks or adding trust keys is not a substitute. Record source rebuilds separately from adoption of official prebuilt binaries.
+
+After a library update, verify that its consumers actually load the new executable/library, beyond checking the installed package version. Separate service-recovery time, management-path gaps and ordinary-network outages, stating sampling intervals and scope. For schedule changes, distinguish configuration readback, tests and the next natural execution; manual catch-up must not become an on-time success in history.
+
+Recovery-condition mistake and actual update results → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#openssl-backports-20261114] · Review-publication and scheduling lessons → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#audit-execution-20261114]
+
+Verify notification arrival and review execution separately
+
+When adding notifications, verify decision rules, provider acceptance, actual device arrival, on-screen display and icon badges separately. Decide whether the badge represents unread items or current warnings, and never convert stale/unknown state to zero. Check registration after a service migration and limit send tests to devices and counts chosen by the owner. When zero warnings should clear the badge, allow a retry if clearing failed and the same state arrives again.
+
+Scheduled review also separates configuration, actual start, complete validated responses, persistence/publication and the next natural occurrence. Successful manual catch-up neither rewrites a missed occurrence as successful nor establishes that recurrence was repaired.
+
+Actual migration and badge-check scope → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#notification-webpush-20261113] · What manual recovery established → [https://dueyama.github.io/r6s-openwrt-lab-notes/luna-en.html#luna-manual-catchup-20261113]
+
+
+
+Develop it with informed choices
+
+What has been checked in this guide
+
+On October 21, 2026, seven synthetic input/expected-output pairs and two sequences—collection failure → recovery and counter reset → next valid sample—were checked with independent arithmetic and state logic for interface-counter-v1. Checks also verified all eight sections, the prompt and exact contract identifiers in both languages’ HTML and text editions.
+
+This validates the examples and distributed content. The records reviewed here do not contain evidence of a reader and AI completing implementation and deployment on unfamiliar equipment. Run the same examples against your own generated implementation, then separately verify hardware collection and display.
+
+This page is reference material, not a permission grant or approval to execute everything. The reader chooses installations, configuration changes, external-AI data transfers and traffic-path changes after understanding scope, effects and rollback. Before AI log review, establish which fields leave the device.
+
+AI implementation errors and environment differences remain possible. Expand specifications and tests when failures reveal gaps. A guide update does not automatically update your implementation: compare the changes and validation before adopting it.
+
+Start with the prompt above and find a first milestone for your environment. Shared methods and results can improve the guide itself.

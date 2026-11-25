@@ -1,0 +1,213 @@
+{
+  "contract": "interface-counter-v1",
+  "synthetic": true,
+  "cases": [
+    {
+      "case": "normal",
+      "interface_alias": "example-uplink",
+      "previous": {
+        "elapsed_ms": 0,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "current": {
+        "elapsed_ms": 2000,
+        "rx_bytes": 2600,
+        "tx_bytes": 1300
+      },
+      "expected": {
+        "status": "ok",
+        "rx_bytes_per_second": 800,
+        "tx_bytes_per_second": 400
+      }
+    },
+    {
+      "case": "idle",
+      "interface_alias": "example-uplink",
+      "previous": {
+        "elapsed_ms": 0,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "current": {
+        "elapsed_ms": 2000,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "expected": {
+        "status": "ok",
+        "rx_bytes_per_second": 0,
+        "tx_bytes_per_second": 0
+      }
+    },
+    {
+      "case": "first_sample",
+      "interface_alias": "example-uplink",
+      "previous": null,
+      "current": {
+        "elapsed_ms": 2000,
+        "rx_bytes": 2600,
+        "tx_bytes": 1300
+      },
+      "expected": {
+        "status": "warming_up",
+        "rx_bytes_per_second": null,
+        "tx_bytes_per_second": null
+      }
+    },
+    {
+      "case": "collection_failed",
+      "interface_alias": "example-uplink",
+      "previous": {
+        "elapsed_ms": 0,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "current": null,
+      "expected": {
+        "status": "unavailable",
+        "rx_bytes_per_second": null,
+        "tx_bytes_per_second": null
+      }
+    },
+    {
+      "case": "counter_reset",
+      "interface_alias": "example-uplink",
+      "previous": {
+        "elapsed_ms": 0,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "current": {
+        "elapsed_ms": 2000,
+        "rx_bytes": 100,
+        "tx_bytes": 600
+      },
+      "expected": {
+        "status": "reset",
+        "rx_bytes_per_second": null,
+        "tx_bytes_per_second": null
+      }
+    },
+    {
+      "case": "zero_interval",
+      "interface_alias": "example-uplink",
+      "previous": {
+        "elapsed_ms": 0,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "current": {
+        "elapsed_ms": 0,
+        "rx_bytes": 2600,
+        "tx_bytes": 1300
+      },
+      "expected": {
+        "status": "invalid",
+        "rx_bytes_per_second": null,
+        "tx_bytes_per_second": null
+      }
+    },
+    {
+      "case": "negative_counter",
+      "interface_alias": "example-uplink",
+      "previous": {
+        "elapsed_ms": 0,
+        "rx_bytes": 1000,
+        "tx_bytes": 500
+      },
+      "current": {
+        "elapsed_ms": 2000,
+        "rx_bytes": -1,
+        "tx_bytes": 1300
+      },
+      "expected": {
+        "status": "invalid",
+        "rx_bytes_per_second": null,
+        "tx_bytes_per_second": null
+      }
+    }
+  ],
+  "sequences": [
+    {
+      "case": "failure_then_recovery",
+      "samples": [
+        {
+          "elapsed_ms": 0,
+          "rx_bytes": 1000,
+          "tx_bytes": 500
+        },
+        null,
+        {
+          "elapsed_ms": 4000,
+          "rx_bytes": 4000,
+          "tx_bytes": 2000
+        },
+        {
+          "elapsed_ms": 6000,
+          "rx_bytes": 5600,
+          "tx_bytes": 2800
+        }
+      ],
+      "expected": [
+        {
+          "status": "warming_up",
+          "rx_bytes_per_second": null,
+          "tx_bytes_per_second": null
+        },
+        {
+          "status": "unavailable",
+          "rx_bytes_per_second": null,
+          "tx_bytes_per_second": null
+        },
+        {
+          "status": "warming_up",
+          "rx_bytes_per_second": null,
+          "tx_bytes_per_second": null
+        },
+        {
+          "status": "ok",
+          "rx_bytes_per_second": 800,
+          "tx_bytes_per_second": 400
+        }
+      ]
+    },
+    {
+      "case": "reset_then_valid",
+      "samples": [
+        {
+          "elapsed_ms": 0,
+          "rx_bytes": 1000,
+          "tx_bytes": 500
+        },
+        {
+          "elapsed_ms": 2000,
+          "rx_bytes": 100,
+          "tx_bytes": 50
+        },
+        {
+          "elapsed_ms": 4000,
+          "rx_bytes": 1700,
+          "tx_bytes": 850
+        }
+      ],
+      "expected": [
+        {
+          "status": "warming_up",
+          "rx_bytes_per_second": null,
+          "tx_bytes_per_second": null
+        },
+        {
+          "status": "reset",
+          "rx_bytes_per_second": null,
+          "tx_bytes_per_second": null
+        },
+        {
+          "status": "ok",
+          "rx_bytes_per_second": 800,
+          "tx_bytes_per_second": 400
+        }
+      ]
+    }
+  ]
+}
