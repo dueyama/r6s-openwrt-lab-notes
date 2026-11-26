@@ -1,4 +1,4 @@
-﻿AI-assisted concept distribution / 2026-11-25 / guide-1.24
+﻿AI-assisted concept distribution / 2026-11-26 / guide-1.25
 https://dueyama.github.io/r6s-openwrt-lab-notes/start
 
 
@@ -29,7 +29,7 @@ AIへ渡すテキスト版を開く・保存 [https://dueyama.github.io/r6s-open
 
 最初の到達点は「合成データで受信・送信の表示を作り、共通の確認例を通すこと」です。その後、実機で対応するカウンターを読めるか調べます。OSをOpenWrtへ変更する工程は独立した発展段階にします。
 
-ガイド版：2026-11-25 / guide-1.24 · 共通仕様：interface-counter-v1
+ガイド版：2026-11-26 / guide-1.25 · 共通仕様：interface-counter-v1
 
 これは新しく用意した実装ガイドです。読者環境での端から端までの導入成功は、まだ検証していません。元のR6S実験の検証結果を、あなたの機材での成功と読み替えないでください。
 
@@ -150,6 +150,8 @@ AIと進める四つの段階
 AIには、適用前に確かめること、適用後に確かめること、まだ未確認のことを分けて計画してもらいます。これらの条件が揃うまで変更を保留し、初めのカウンター表示実験にカーネル変更を必須にしません。
 
 今回の判断・互換性検証・救援SD・起動確認の詳細 → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html#kernel-backport-20261029]
+
+共有ライブラリを更新したら、利用中のサービスがどの版を読み込んでいるかも照合します。11月26日のOpenSSL更新では、隔離環境で旧版への復旧を試し、導入後にSnortとntopngが新版を読み込んだことを確認しました。 更新と確認の記録 [https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html#openssl-backports-20261126]
 
 11月6日のmusl更新では、libcの修正と周辺3パッケージの依存メタデータ変更を区別し、再起動後のPID 1を含む実読込みまで確認しました。同じコードへ戻せることと、パッケージDB全体が元のバイト列になることも別です。 具体的な更新・確認範囲 → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations.html#musl-regex-repair-20261106]
 

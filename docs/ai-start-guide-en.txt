@@ -1,4 +1,4 @@
-﻿AI-assisted concept distribution / 2026-11-25 / guide-1.24
+﻿AI-assisted concept distribution / 2026-11-26 / guide-1.25
 https://dueyama.github.io/r6s-openwrt-lab-notes/start-en
 
 
@@ -29,7 +29,7 @@ Start with a suitable part using your Raspberry Pi, Mac or Linux machine. This g
 
 The first milestone is a receive/transmit display using synthetic data that passes shared checks. Then investigate whether corresponding counters can be read on your device. Installing OpenWrt is a separate, later stage.
 
-Guide edition: 2026-11-25 / guide-1.24 · Shared contract: interface-counter-v1
+Guide edition: 2026-11-26 / guide-1.25 · Shared contract: interface-counter-v1
 
 This is a newly authored implementation guide. End-to-end installation in a reader’s environment has not yet been validated. Results from the original R6S experiment do not establish success on your equipment.
 
@@ -150,6 +150,8 @@ A successful build establishes that an artifact was generated. Booting and netwo
 Ask AI to separate pre-application checks, post-application checks and unknowns in the plan. Defer the change until its prerequisites are established; a kernel change is not required for the introductory counter-display experiment.
 
 Details of this decision, compatibility checks, rescue SD and boot acceptance → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#kernel-backport-20261029]
+
+When updating a shared library, check which version its consumers actually loaded. For the November 26 OpenSSL update we rehearsed rollback in isolation and then verified that Snort and ntopng loaded the new libraries on the router. Update and verification record [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#openssl-backports-20261126]
 
 The November 6 musl update distinguished the libc repair from dependency-metadata changes in three related packages and verified loaded content including PID 1 after reboot. Restoring the same code is also distinct from restoring every original package-database byte. Concrete update and acceptance scope → [https://dueyama.github.io/r6s-openwrt-lab-notes/operations-en.html#musl-regex-repair-20261106]
 
